@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIXPC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" type="x-icon" href="logo.png">
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+    <header class="click">
+        <div class="logo">
+          <img src="logo.png" alt="" style="height: 47px">
+        </div>
+        <div class="name">
+              <h1><b style="color: #8c4dc0;">PIX</b>
+              <b style="color: #8c4dc0;">PC</b></h1>
+        </div>
+
+    <!-- Search Bar and Navigation -->
+    <div class="header-container">
+        <div class="searchbar">
+            <input type="text" placeholder="Search " class="search-input">
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>  
+            </ul>
+        </nav>
+        </div>
+      </header>
+      <body class="bg-gray-100 font-sans">
+    <!-- Products Section -->
+    <section id="products" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Featured Products</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="relative">
+                        <img src="Product1.jpg" alt="ASUS Dual GeForce RTX™ 4070" class="pix">
+                        
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">ASUS Dual GeForce RTX™</h3>
+                        <p class="text-gray-600 text-sm mb-4">SUPER OC Edition 12GB GDDR6X with two powerful Axial-tech fans and a 2.56-slot design for broad compatibility</p>
+                        <div class="flex justify-between items-center">
+                            <span class="price">₱44,150.00</span>
+                            <button onclick="addToCart('ASUS Dual GeForce RTX™ 4070', 905)" class="prd1"><a href="Product1.html">Add to Cart</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="relative">
+                        <img src="Product2.jpg" alt="ATTACK SHARK X68 HE" class="pix">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">ATTACK SHARK X68 HE</h3>
+                        <p class="text-gray-600 text-sm mb-4">ATTACK SHARK X11 Gaming Mouse with Magnetic Charging Dock, PixArt PAW3311 Gaming Sensor,Wireless</p>
+                        <div class="flex justify-between items-center">
+                            <span class="price">₱4,520.05</span>
+                            <button onclick="addToCart('ATTACK SHARK X68 HE', 4,520.05)" class="prd1"><a href="Product2.html">Add to Cart</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="relative">
+                        <img src="Product3.jpg" alt="ATTACK SHARK X11" class="pix">
+                        <div class="absolute top-0 right-0 bg-red-500 text-white px-2 py-1 text-xs font-bold rounded-bl-lg">SALE</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">ATTACK SHARK X11</h3>
+                        <p class="text-gray-600 text-sm mb-4">ATTACK SHARK X11 Tri-mode Gaming Mouse With Touchpad RGB Charging Dock PAW3395PRO Sensor</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="price" style="color: gray; font-family: Arial, Helvetica, sans-serif;">2,999</span>
+                                <span class="price">₱2,499</span>
+                            </div>
+                            <button onclick="addToCart('ATTACK SHARK X11', 55)" class="prd1"><a href="Product3.html">Add to Cart</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="relative">
+                        <img src="Product4.jpg" alt="ATTACK SHARK L80PRO" class="pix">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">ATTACK SHARK L80PRO</h3>
+                    <p class="text-gray-600 text-sm mb-4">Lightweight Headphones with 20ms Low Latency, Dual Mics, 40mm Drivers,300mAh Battery(2.4G/Bluetooth/Wired)</p>
+                        <div class="flex justify-between items-center">
+                            <span class="price">₱3,999</span>
+                            <a href="Product4.html" class="prd1 button-link">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="relative">
+                        <img src="Product5.jpg" alt="ATTACK SHARK L80PRO" class="pix">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">ATTACK SHARK Gaming Mouse Pad</h3>
+                    <p class="text-gray-600 text-sm mb-4">Ultra-Smooth Surface, 9H Tempered Glass, Impact & Scratch Resistant, Low Surface Friction</p>
+                        <div class="flex justify-between items-center">
+                            <span class="price">₱3,675</span>
+                            <a href="Product5.html" class="prd1 button-link">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="relative">
+                        <img src="Product6.webp" alt="ATTACK SHARK X11" class="pix">
+                        <div class="absolute top-0 right-0 bg-red-500 text-white px-2 py-1 text-xs font-bold rounded-bl-lg">SALE</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">ATTACK SHARK x MAMBASNAKE 62-Key Keyboard Cover</h3>
+                        <p class="text-gray-600 text-sm mb-4">Dust Cover, Waterproof, Anti-Knock, 293*105*29mm</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="price" style="color: gray; font-family: Arial, Helvetica, sans-serif;">₱1,459</span>
+                                <span class="price">₱1,130</span>
+                            </div>
+                            <button onclick="addToCart('ATTACK SHARK X11', 55)" class="prd1"><a href="Product6.html">Add to Cart</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="relative">
+                        <img src="Product7.webp" alt="ATTACK SHARK L80PRO" class="pix">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">ATTACK SHARK C07 Custom Aviator Cable for 8KHz Keyboard</h3>
+                    <p class="text-gray-600 text-sm mb-4">Single Crystal Copper RGB Light Up USB-C Gaming Keyboard Cable</p>
+                        <div class="flex justify-between items-center">
+                            <span class="price">₱3,956.63</span>
+                            <a href="Product7.html" class="prd1 button-link">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="relative">
+                        <img src="Product8.webp" alt="ATTACK SHARK L80PRO" class="pix">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">ATTACK SHARK Switch Opener Kit with Switch Puller</h3>
+                    <p class="text-gray-600 text-sm mb-4">Aluminum Keyboard Switch Opener for Cherry MX Gateron Kailh Box Outemu</p>
+                        <div class="flex justify-between items-center">
+                            <span class="price">₱499</span>
+                            <a href="Product8.html" class="prd1 button-link">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+      <footer>
+    <div class="Shop">
+      <h3>Shop</h3>
+      <ul>
+        <li><a href="Product1.html">Graphics Card</a></li>
+        <li><a href="Product2.html">Keyboard</a></li>
+        <li><a href="Product3.html">Mouse</a></li>
+        <li><a href="Product4.html">Headphones</a></li>
+      </ul>
+    </div>
+
+    <div class="Services">
+      <h3>Services</h3>
+      <ul>
+        <li><a href="services.html">Custom PC</a></li>
+        <li><a href="services.html">Repairs</a></li>
+        <li><a href="services.html">Consultation</a></li>
+        <li><a href="services.html">Warranty Services</a></li>
+      </ul>
+    </div>
+
+    <div class="Company">
+      <h3>Company</h3>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="about.html">Careers</a></li>
+        <li><a href="about.html">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="Support">
+      <h3>Support</h3>
+      <ul>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="services.html">Shipping Policy</a></li>
+        <li><a href="services.html">Returns & Refunds</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 PixPC. All Rights Reserved |
+        <a href="privacy.html">Privacy Policy</a> |
+        <a href="terms.html">Terms of Service</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

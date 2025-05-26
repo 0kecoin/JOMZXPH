@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PIXPC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="shortcut icon" type="x-icon" href="logo.png" />
+  <link rel="stylesheet" href="Product5.css" />
+
+  <!-- Slide-in Animation -->
+  <style>
+    @keyframes slideLeft {
+      0% {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    #thankYouNotification.show {
+      animation: slideLeft 0.4s ease-out forwards;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="click">
+    <div class="logo">
+      <img src="logo.png" alt="" style="height: 47px" />
+    </div>
+    <div class="name">
+      <h1><b style="color: #8c4dc0;">PIX</b><b style="color: #8c4dc0;">PC</b></h1>
+    </div>
+
+    <div class="header-container">
+      <div class="searchbar">
+        <input type="text" placeholder="Search " class="search-input" />
+      </div>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Product Section -->
+  <div class="product-container">
+    <div class="content">
+       <h1>ATTACK SHARK Switch Opener Kit with Switch Puller
+        <p style="font-family: sans-serif; font-weight: 400; font-size: 18px;">Aluminum Keyboard Switch Opener for Cherry MX Gateron Kailh Box Outemu 
+            <br>Akko Panda Switch, Switch Opener for Mechanical Keyboard with Metal Magnet</p></h1>
+
+      <div class="stars">
+        <div>
+          <i class="star">⭐</i>
+          <i class="star">⭐</i>
+          <i class="star">⭐</i>
+          <i class="star">⭐</i>
+          <i class="star">⭐</i>
+        </div>
+        <span>99 reviews</span>
+      </div>
+
+      <br /><br />
+
+      <ul class="features">
+        <li>Premium Aluminum Alloy</li>
+        <li>Switch Opener Kit</li>
+        <li>Powerful Metal Magnet</li>
+        <li>Anti-Slip Design</li>
+        <li>Easy to Use</li>
+        <li>Keyboard Switch Puller</li>
+      </ul>
+
+      <div class="social-icons"><br />
+        <strong style="margin-top: 29px;">SHARE:</strong>
+        <a href="https://www.facebook.com/"><img src="iconFB.png" alt="" /></a>
+        <a href="https://www.instagram.com/"><img src="iconIG.png" alt="" /></a>
+        <a href="https://www.tiktok.com/"><img src="iconTT.webp" alt="" /></a>
+        <a href="https://x.com/"><img src="iconTW.webp" alt="" /></a>
+      </div>
+
+      <br /><br />
+
+      <p class="price">₱499</p>
+      <hr />
+
+      <!-- Add to Cart Button -->
+      <button onclick="openCheckoutModal()"
+        class="inline-block mt-4 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">
+        Add to Cart
+      </button>
+    </div>
+
+    <div class="item">
+      <img src="Product8.webp" alt="" />
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div class="checkout" style="margin-top: 50px;">
+    <div id="checkoutModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+      <div class="bg-white p-6 rounded shadow-md w-full max-w-md relative">
+        <button onclick="closeCheckoutModal()" class="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-xl font-bold">&times;</button>
+        <h2 class="text-xl font-semibold mb-4">Complete Your Purchase</h2>
+        <form onsubmit="return completeCheckout()" class="space-y-4">
+          <input type="text" placeholder="Full Name" required class="w-full p-2 border border-gray-300 rounded" />
+          <input type="email" placeholder="Email Address" required class="w-full p-2 border border-gray-300 rounded" />
+          <input type="text" placeholder="Shipping Address" required class="w-full p-2 border border-gray-300 rounded" />
+          <input type="tel" placeholder="Phone Number" required class="w-full p-2 border border-gray-300 rounded" />
+          <button type="submit" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 w-full">Submit Order</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Thank You Notification -->
+  <div id="thankYouNotification"
+    class="hidden fixed top-1/2 right-6 transform -translate-y-1/2 bg-green-500 text-white px-6 py-3 rounded shadow-lg opacity-0 transition-opacity duration-500 z-50">
+    ✅ Thank you for purchasing!
+  </div>
+
+  <!-- JS Logic -->
+  <script>
+    function openCheckoutModal() {
+      document.getElementById('checkoutModal').classList.remove('hidden');
+    }
+
+    function closeCheckoutModal() {
+      document.getElementById('checkoutModal').classList.add('hidden');
+    }
+
+    function completeCheckout() {
+      closeCheckoutModal();
+      showThankYouNotification();
+      return false; // Prevent actual form submission
+    }
+
+    function showThankYouNotification() {
+      const notification = document.getElementById('thankYouNotification');
+      notification.classList.remove('hidden');
+      notification.classList.add('show', 'opacity-100');
+
+      setTimeout(() => {
+        notification.classList.remove('show', 'opacity-100');
+        notification.classList.add('hidden');
+      }, 3000);
+    }
+  </script>
+
+  <!-- Footer -->
+  <footer>
+    <div class="Shop">
+      <h3>Shop</h3>
+      <ul>
+        <li><a href="Product1.html">Graphics Card</a></li>
+        <li><a href="Product2.html">Keyboard</a></li>
+        <li><a href="Product3.html">Mouse</a></li>
+        <li><a href="Product4.html">Headphones</a></li>
+      </ul>
+    </div>
+
+    <div class="Services">
+      <h3>Services</h3>
+      <ul>
+        <li><a href="services.html">Custom PC</a></li>
+        <li><a href="services.html">Repairs</a></li>
+        <li><a href="services.html">Consultation</a></li>
+        <li><a href="services.html">Warranty Services</a></li>
+      </ul>
+    </div>
+
+    <div class="Company">
+      <h3>Company</h3>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="about.html">Careers</a></li>
+        <li><a href="about.html">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="Support">
+      <h3>Support</h3>
+      <ul>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="services.html">Shipping Policy</a></li>
+        <li><a href="services.html">Returns & Refunds</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 PixPC. All Rights Reserved |
+        <a href="privacy.html">Privacy Policy</a> |
+        <a href="terms.html">Terms of Service</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

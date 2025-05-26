@@ -1,0 +1,48 @@
+<!-- cart.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart - PIXPC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-8">
+
+  <div class="max-w-xl mx-auto bg-white p-6 shadow-md rounded">
+    <h1 class="text-2xl font-bold mb-4">Your Cart</h1>
+    
+    <div id="cart-details" class="mb-6 text-lg">
+      <!-- JavaScript will fill in this section -->
+    </div>
+
+    <h2 class="text-xl font-semibold mb-2">Checkout Form</h2>
+    <form onsubmit="return submitForm()" class="space-y-4">
+      <input type="text" placeholder="Full Name" required class="w-full p-2 border border-gray-300 rounded" />
+      <input type="email" placeholder="Email Address" required class="w-full p-2 border border-gray-300 rounded" />
+      <input type="text" placeholder="Shipping Address" required class="w-full p-2 border border-gray-300 rounded" />
+      <input type="tel" placeholder="Phone Number" required class="w-full p-2 border border-gray-300 rounded" />
+      <button type="submit" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Complete Purchase</button>
+    </form>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const product = params.get('product');
+    const price = params.get('price');
+
+    if (product && price) {
+      document.getElementById('cart-details').innerHTML = `
+        <p><strong>Product:</strong> ${decodeURIComponent(product)}</p>
+        <p><strong>Price:</strong> ₱${price}.00</p>
+        <hr class="my-4" />
+      `;
+    }
+
+    function submitForm() {
+      alert('✅ Thank you! Your purchase has been completed.');
+      return false; // Prevent actual form submission for now
+    }
+  </script>
+
+</body>
+</html>
